@@ -40,14 +40,17 @@ onMounted(async () => {
 </div>
 <div>
   <div class="List-personagens">
-  <div class="row row-cols-3 g-2">  
+    <template v-if="people.length === 0">
+      <h2 class="aviso">Espere carregar ou este planeta não possui residents :( </h2>
+    </template>
+    <template v-else>
       <ListResidents
         v-for="person in people"
         :key="person.name"
         :name="person.name"
         :url="`@/img/people/${person.url.split('/').filter(Boolean).pop()}.jpg`"
       />
-  </div>
+    </template>
   </div>
 </div>
 </template>
