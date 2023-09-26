@@ -1,29 +1,6 @@
-# pokedex
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+- Readme do projeto com descrição: Do curso, da matéria, dados do aluno e objetivo do projeto
+Nome: Murilo de Castro Pangone
+Curso: ADS
+Materia: DESENVOLV DE APLICACOES P/ A INTERNET
+RA:1936089
+Objetivo do projeto: é adquirir conhecimento sobre o framework VueJs, aplicar os conceitos e tecnicas aprendidos em sala, tutoriais e documentação!

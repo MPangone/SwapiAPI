@@ -13,7 +13,7 @@ onMounted(async () => {
     const data = await response.json();
     console.log('Response from API:', data);
 
-    if (data.residents) {
+    if (data.residents ) {
       const peoplePromises = await Promise.all(
         data.residents.map(async (residentUrl) => {
           const residentResponse = await fetch(residentUrl);
@@ -23,33 +23,31 @@ onMounted(async () => {
 
       people.value = peoplePromises;
     } else {
-      console.error('Dados de residentes não encontrados para este planeta.');
+      console.warn('Dados de residentes não encontrados para este planeta.');
     }
 
     planet.value = data;
   } catch (error) {
-    console.error('Erro ao buscar detalhes do planeta:', error);
+    console.warn('Erro ao buscar detalhes do planeta:', error);
   }
 });
 </script>
 
 <template>
-  <div>
-    <h1>{{ planet ? planet.name : 'Loading...' }}</h1>
-    <h2>Residents</h2>
-    <div>
-        <div class="col-sm-4 col-md-6">
-          <div class="card">
-            <div class="card-body row">
-              <ListResidents
-                v-for="person in people"
-                :key="person.name"
-                :name="person.name"
-                :url="`@/img/people/${person.url.split('/').filter(Boolean).pop()}.jpg`"
-              />
-            </div>
-        </div>
-      </div>
-    </div>
+<div class="title">
+  <h1>{{ planet ? planet.name : 'Loading...' }}</h1>
+  <h3>Residents</h3>
+</div>
+<div>
+  <div class="List-personagens">
+  <div class="row row-cols-3 g-2">  
+      <ListResidents
+        v-for="person in people"
+        :key="person.name"
+        :name="person.name"
+        :url="`@/img/people/${person.url.split('/').filter(Boolean).pop()}.jpg`"
+      />
   </div>
+  </div>
+</div>
 </template>

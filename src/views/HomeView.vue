@@ -19,35 +19,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
-    <div class="container">
-      <div class="row mt-4">
-        <div class="col-sm-12 col-md-6">
-          <div class="card" style="width: 18rem;">
-          <!--div class="card mb-3" style="width: 31rem;"--> 
-            <img src="https://raw.githubusercontent.com/jendang/star-wars-api/master/starwarslogo.png" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">StarWars</h5>
-            <p class="card-text">Just a project</p>
-            <a href="https://www.starwars.com/" target="_blank" class="btn btn-primary">About StarWars</a>
-        </div>
-        </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-          <div class="card">
-            <div class="card-body row">
-              <ListPlanets
-              v-for="planets in planetas"
-              :key="planets.key"
-              :name="planets.name"
-              :url="planets.url"
-              />
-            </div>
-          </div> 
-        </div>    
-      </div>
+  <div class="title">
+    <h2>Planets</h2> 
+  </div>
+  <div class="List-planets">
+    <div class="row row-cols-3 g-2">  
+    <ListPlanets
+    v-for="planets in planetas"
+    :key="planets.key"
+    :name="planets.name"
+    :url="planets.url"
+    />
     </div>
-  </main>
+  </div>          
+          
 </template>
 
 <style>

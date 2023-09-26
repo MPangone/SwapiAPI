@@ -10,17 +10,14 @@ const imagePath = getImagePath(url.split('/').filter(Boolean).pop());
 
 </script>
 
-<template id="personagens-card">
-<div class="row row-cols-1 row-cols-md-3 g-5">
-  <div class="col">
-  <div class="card">
-    <img :src="imagePath" class="card-img-top" :alt="name">
-    <div class="card-body">    
-      <p class="card-title">{{ name }}</p>
-      <p class="card-text">teste</p>
-    </div>
+<template>
+<div class="col"  style="width: 15rem;">
+  <div class="card h-100">
+      <img id="fotopersonagens" :src="imagePath" class="card-img-top" alt="">
+      <div class="card-body">
+      <h5 class="card-title">{{ name }}</h5>
   </div>
-</div>
+  </div>
 </div>
 </template>
 

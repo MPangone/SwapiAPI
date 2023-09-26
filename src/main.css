@@ -1,16 +1,27 @@
-#teste {
-  background-image: url('https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2022/07/Aglomerado-de-gal%C3%A1xias-SMACS-0723-Cr%C3%A9ditos-NASA-ESA-CSA-and-STScI%E2%81%A3%E2%81%A3-1003x1024.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh; 
+.title{
+  text-align: center;
+  color: white;
 }
-
-  
-
-#foto-personagens{
-  width: 350px;
-  height: 350px;
+#fotopersonagens{
+  width: 200px;
+  height: auto;
+  display: block;
 }
-
-
+.List-planets{
+  margin-left: 4rem;
+  background-color: black;
+}
+.List-personagens{
+  margin-left: 8rem;
+  background-color: black;
+}
+.card-title{
+  color: white;
+}
+.card{
+  background-color: black;
+}
+.btn{
+  background-color: white;
+  color: black;
+}

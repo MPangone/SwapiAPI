@@ -24,9 +24,7 @@ import { ref } from 'vue'
   <div class="main"> 
     <router-view></router-view>
   </div>
-  <footer class="bg-dark text-light">
-    <div> ADS [1936089] {{ new Date().getFullYear() }}</div>
-  </footer>
+
 </template>
 
 <style>
